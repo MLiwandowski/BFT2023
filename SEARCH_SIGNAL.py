@@ -927,6 +927,10 @@ def check_if_signal(SYMBOL, current_time, current_price):
             ( all(sig in signal_PSM for sig in ['Pos_4', 'BB_4', 'ASL_4', 'Sum4']) \
             or all(sig in signal_PSM for sig in ['ASL_4', 'Sum4', 'BB23_2']) \
             or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
+            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
+            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
+            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
+            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
             or all(sig in signal_PSM for sig in ['BB_2', 'Sum2']) \
                 ):
             print("DW")
