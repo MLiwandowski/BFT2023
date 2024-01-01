@@ -8,6 +8,9 @@ import ta
 import statsmodels.api as sm
 from datetime import datetime
 import subprocess
+
+from get_user_agent import get_random_user_agent
+
 # from price_module import get_symbol_price
 
 SYMBOL = 'ETHUSDT'
@@ -15,14 +18,6 @@ LIMIT = 100
 INTERVAL = '1m'
 signal_PSM = []
 
-
-def get_random_user_agent():
-    os_version = f"Windows NT 10.0; Win64; x64"
-    webkit_version = f"AppleWebKit/{random.randint(500, 600)}.{random.randint(10, 99)}"
-    chrome_version = f"Chrome/{random.randint(100, 150)}.{random.randint(0, 9)}.{random.randint(0, 9)}.{random.randint(0, 9)}"
-    safari_version = f"Safari/{random.randint(500, 600)}.{random.randint(10, 99)}"
-    user_agent = f"Mozilla/5.0 ({os_version}) {webkit_version} (KHTML, like Gecko) {chrome_version} {safari_version}"
-    return user_agent
 
 def get_futures_klines(SYMBOL, INTERVAL, LIMIT):
     user_agent = get_random_user_agent()
@@ -926,10 +921,6 @@ def check_if_signal(SYMBOL, current_time, current_price):
         if  all_price_1 < 0.25 and \
             ( all(sig in signal_PSM for sig in ['Pos_4', 'BB_4', 'ASL_4', 'Sum4']) \
             or all(sig in signal_PSM for sig in ['ASL_4', 'Sum4', 'BB23_2']) \
-            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
-            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
-            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
-            or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
             or all(sig in signal_PSM for sig in ['VOL17_1', 'Pos_4', 'ASL_4', 'BB23_2', 'ASL_4', 'Pr_4']) \
             or all(sig in signal_PSM for sig in ['BB_2', 'Sum2']) \
                 ):
