@@ -1,5 +1,5 @@
-KEY = "VbVM0IbJIdRoHOiBsCbvYU8xWNkNEUGRwUiWVZCVadImvJj7qRqAXmoweWHdbtEw"
-SECRET = "6fZxmcHxdIBDImv1xhSXry9OYeEBdIzidJQenjltiw3DRhp1J3xdWqkfV0MNoHFP"
+KEY = " "
+SECRET = " "
 
 # from binance import Client
 # client = Client(KEY, SECRET)
